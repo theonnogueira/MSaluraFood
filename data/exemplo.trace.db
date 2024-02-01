@@ -1,0 +1,18 @@
+2024-01-24 10:20:44.166889-03:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE pagamentos (\000d\000aid bigint[*](20) NOT NULL AUTO_INCREMENT,\000d\000avalor decimal(19,2) NOT NULL,\000d\000anome varchar(100) DEFAULT NULL,\000d\000anumero varchar(19) DEFAULT NULL,\000d\000aexpiracao varchar(7) NOT NULL,\000d\000acodigo varchar(3) DEFAULT NULL,\000d\000astatus varchar(255) NOT NULL,\000d\000aforma_de_pagamento_id bigint(20) NOT NULL,\000d\000apedido_id bigint(20) NOT NULL,\000d\000aPRIMARY KEY (id)\000d\000a)"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, DEFAULT, GENERATED, ON UPDATE, NOT NULL, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE pagamentos (
+id bigint(20) NOT NULL AUTO_INCREMENT,
+valor decimal(19,2) NOT NULL,
+nome varchar(100) DEFAULT NULL,
+numero varchar(19) DEFAULT NULL,
+expiracao varchar(7) NOT NULL,
+codigo varchar(3) DEFAULT NULL,
+status varchar(255) NOT NULL,
+forma_de_pagamento_id bigint(20) NOT NULL,
+pedido_id bigint(20) NOT NULL,
+PRIMARY KEY (id)
+) [42001-224]
+2024-01-26 15:09:54.385354-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+2024-01-26 15:14:53.679184-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
